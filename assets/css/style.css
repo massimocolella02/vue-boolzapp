@@ -89,3 +89,9 @@ img{
     padding: 8px;
     border-radius: 10px;
 }
+.font-size-small{
+    font-size: 0.7rem
+}
+.text-align-end{
+    text-align: end;
+}

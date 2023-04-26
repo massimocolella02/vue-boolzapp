@@ -50,9 +50,9 @@
                         
                         <!-- Contatti -->
                         <div class="contatti overflow-auto">
-                            <div class="contatto d-flex justify-content-between p-2" v-for="(element, index) in contacts">
+                            <div class="contatto d-flex justify-content-between p-2" v-for="(element, index) in contacts" :key="index" @click="chat">
                                 <div class="d-flex">
-                                    <img :src="contacts.avatar" :alt="contacts.name" class="rounded-circle">
+                                    <img :src="element.avatar" :alt="element.name" class="rounded-circle">
                                     <div class="info mx-2">
                                         <h6>{{element.name}}</h6>
                                         <span>Ultimo messaggio inviato</span>

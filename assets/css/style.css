@@ -79,3 +79,13 @@ img{
     background-color: #EAEAEA;
 
 }
+.sent{
+    background-color: #D5F9BA;
+    padding: 8px;
+    border-radius: 10px;
+}
+.received{
+    background-color: #FFFFFF;
+    padding: 8px;
+    border-radius: 10px;
+}

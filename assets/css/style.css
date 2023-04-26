@@ -31,6 +31,7 @@ img{
 }
 .col-4{
     background-color: #FFFFFF;
+    border-right: 1px solid #D6D6D5;
 }
 .icon{
     color: #B1B1B1;
@@ -49,6 +50,32 @@ img{
     justify-content: center;
     align-items: center;
 }
+
+.my-profile, .profilo-attivo{
+    height: 8vh;
+    background-color: #EAEAEA;
+    
+}
+.avviso-notifiche{
+    height: 10vh;
+}
+.search{
+    height: 6vh;
+}
 .contatti{
-    height: 66vh;
+    height: calc(90vh - 24vh );
+}
+.chat{
+    height: calc(90vh - 8vh);
+    position: relative;
+}
+.messages{
+    height: calc(100% - 8vh);
+    background-image: url(../img/mine.jpg);
+}
+.write-message{
+    height: 8vh;
+    position: sticky;
+    background-color: #EAEAEA;
+
 }

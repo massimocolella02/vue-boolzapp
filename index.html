@@ -17,6 +17,8 @@
                 <div class="row">
                     <!-- Parte di sinistra -->
                     <div class="col-4">
+
+                        <!-- Profilo -->
                         <div class="my-profile p-1 d-flex justify-content-between align-items-center">
                             <div>
                                 <img src="./assets/img/avatar_io.jpg" alt="" class="rounded-circle">
@@ -29,6 +31,7 @@
                             </div>
                         </div>
 
+                        <!-- Avviso Notifiche -->
                         <div class="avviso-notifiche d-flex align-items-center p-1">
                             <i class="fa-solid fa-bell-slash"></i>
                             <div class="m-1">
@@ -37,6 +40,7 @@
                             </div>
                         </div>
 
+                        <!-- Ricerca fra i contatti -->
                         <div class="search p-1">
                             <div class="input-group flex-nowrap">
                                 <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -44,6 +48,7 @@
                             </div>
                         </div>
                         
+                        <!-- Contatti -->
                         <div class="contatti overflow-auto">
                             <div class="contatto d-flex justify-content-between p-2">
                                 <div class="d-flex">
@@ -59,7 +64,31 @@
                     </div>
 
                     <!-- Parte di destra -->
-                    <div class="col-8 border border-warning"></div>
+                    <div class="col-8">
+
+                        <!-- Profilo con cui si messaggia -->
+                        <div class="profilo-attivo p-1 d-flex justify-content-between align-items-center">
+                            <div>
+                                <img src="./assets/img/avatar_1.jpg" alt="" class="rounded-circle">
+                                <span>Michele</span>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message m-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <!-- Chat -->
+                        <div class="chat">
+                            <div class="messages"></div>
+                            <div class="write-message d-flex justify-content-between p-3 align-items-center">
+                                <i class="fa-regular fa-face-smile"></i>
+                                <input type="text" class="form-control mx-3" placeholder="Scrivi un messaggio" aria-describedby="basic-addon1">
+                                <i class="fa-solid fa-microphone"></i> 
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -3,3 +3,52 @@
     padding: 0;
     box-sizing: border-box;
 }
+main{
+    height: 100vh;
+    background: hsla(174, 100%, 29%, 1);
+
+    background: linear-gradient(hsla(174, 100%, 29%, 1) 0%,hsla(67, 10%, 84%, 1) 36%);
+
+    background: -moz-linear-gradient(hsla(174, 100%, 29%, 1) 0%, hsla(67, 10%, 84%, 1) 36%);
+
+    background: -webkit-linear-gradient(hsla(174, 100%, 29%, 1) 0%, hsla(67, 10%, 84%, 1) 36%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#009688", endColorstr="#009688", GradientType=1 );
+}
+main .container{
+    height: 90vh;
+}
+img{
+    width: 50px;
+}
+.my-profile{
+    background-color: #EAEAEA;
+}
+.col-4, .col-8{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    height: 90vh;
+}
+.col-4{
+    background-color: #FFFFFF;
+}
+.icon{
+    color: #B1B1B1;
+    cursor: pointer;
+}
+.avviso-notifiche{
+    background-color: #8EDAFC;
+}
+.fa-bell-slash{
+    background-color: white;
+    color: #8EDAFC;
+    padding: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.contatti{
+    height: 66vh;
+}

@@ -168,7 +168,7 @@ const { createApp } = Vue
       ],
       indexAttivo: 0,
       nuovoMessaggio: '',
-      bot: false,
+      ricercaContatti: '',
       }
     },
     methods: {
@@ -220,6 +220,11 @@ const { createApp } = Vue
             ,1000)
             
         },
+        filterByTerm() {
+            return this.contacts.filter(nome => {
+              return nome.name.toLowerCase().includes(this.ricercaContatti);
+            });
+        }
         
     },
     created(){

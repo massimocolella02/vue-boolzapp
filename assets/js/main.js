@@ -106,7 +106,7 @@ const { createApp } = Vue
           },
           {
               name: 'Claudia',
-              avatar: './assets/img/avatar_5.jpg',
+              avatar: './assets/img/avatar_6.jpg',
               visible: true,
               messages: [
                   {
@@ -166,14 +166,62 @@ const { createApp } = Vue
               ],
           }
       ],
-      indexAttivo: 0
+      indexAttivo: 0,
+      nuovoMessaggio: '',
+      bot: false,
       }
     },
     methods: {
         chat(index){
-            this.activeIndex = index
-        }
+            this.indexAttivo = index
+        },
+        creazioneMessaggio(){
+            //variabili per creazione data
+            const today = new Date();
+
+            let hh = today.getHours();
+            let min = today.getMinutes();
+
+            if (hh < 10) hh = '0' + hh;
+            if (min < 10) min = '0' + min;
+
+            let oraEsatta = hh + ':' + min;
+
+            
+            return{
+            date: oraEsatta,
+            message: this.nuovoMessaggio,
+            status: 'sent'
+            }
+        },
+        messaggioBot(){
+            //variabili per creazione data
+            const today = new Date();
+
+            let hh = today.getHours();
+            let min = today.getMinutes();
+
+            if (hh < 10) hh = '0' + hh;
+            if (min < 10) min = '0' + min;
+
+            let oraEsatta = hh + ':' + min;
+
+            
+            return{
+            date: oraEsatta,
+            message: 'Ok!',
+            status: 'received'
+            }
+        },
+        pushMessaggio(){
+            this.contacts[this.indexAttivo].messages.push(this.creazioneMessaggio());
+            setTimeout(()=>
+            this.contacts[this.indexAttivo].messages.push(this.messaggioBot())
+            ,1000)
+            
+        },
+        
     },
     created(){
     }
-  }).mount('#app')
+  }).mount('#app');

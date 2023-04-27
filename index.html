@@ -81,7 +81,7 @@
 
                         <!-- Chat -->
                         <div class="chat">
-                            <div class="messages">
+                            <div class="messages overflow-auto">
                                 <div class="d-flex flex-column w-75 m-auto pt-2">
                                     <div v-for="(messages, index) in contacts[indexAttivo].messages" :key="index" :class="messages.status">
                                         <p class="mb-0">{{messages.message}}</p>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="write-message d-flex justify-content-between p-3 align-items-center">
                                 <i class="fa-regular fa-face-smile"></i>
-                                <input type="text" class="form-control mx-3" placeholder="Scrivi un messaggio" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control mx-3" placeholder="Scrivi un messaggio" aria-describedby="basic-addon1" v-model="nuovoMessaggio" @keyup.enter="pushMessaggio()">
                                 <i class="fa-solid fa-microphone"></i> 
                             </div>
                         </div>

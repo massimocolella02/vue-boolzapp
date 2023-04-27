@@ -3,7 +3,6 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        counter: 3,
         contacts: [
           {
               name: 'Michele',
@@ -166,14 +165,13 @@ const { createApp } = Vue
                   }
               ],
           }
-      ]
+      ],
+      indexAttivo: 0
       }
     },
     methods: {
-        chat(){
-            
-            
-            
+        chat(index){
+            this.activeIndex = index
         }
     },
     created(){

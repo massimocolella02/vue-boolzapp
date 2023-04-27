@@ -83,11 +83,14 @@ img{
     background-color: #D5F9BA;
     padding: 8px;
     border-radius: 10px;
+    align-self: flex-end;
+    margin: 2px;
 }
 .received{
     background-color: #FFFFFF;
     padding: 8px;
     border-radius: 10px;
+    align-self: flex-start;
 }
 .font-size-small{
     font-size: 0.7rem

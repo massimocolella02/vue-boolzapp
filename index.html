@@ -50,7 +50,7 @@
                         
                         <!-- Contatti -->
                         <div class="contatti overflow-auto">
-                            <div class="contatto d-flex justify-content-between p-2" v-for="(element, index) in contacts" :key="index" @click="chat">
+                            <div class="contatto d-flex justify-content-between p-2" v-for="(element, index) in contacts" :key="index" @click="chat(index)">
                                 <div class="d-flex">
                                     <img :src="element.avatar" :alt="element.name" class="rounded-circle">
                                     <div class="info mx-2">
@@ -83,9 +83,9 @@
                         <div class="chat">
                             <div class="messages">
                                 <div class="d-flex flex-column w-75 m-auto pt-2">
-                                    <div class="received align-self-start">
-                                        <p class="mb-0">Hai fatto il bucato?</p>
-                                        <span class="font-size-small text-align-end d-block">15.30</span>
+                                    <div v-for="(messages, index) in contacts[indexAttivo].messages" :key="index" :class="messages.status">
+                                        <p class="mb-0">{{messages.message}}</p>
+                                        <span class="font-size-small text-align-end d-block">{{messages.date}}</span>
                                     </div>
                                 </div>
                             </div>
